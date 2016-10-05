@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Seelviz - Visualizing Clarity</title>
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/black.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+
+</head>
+<body>
+<div class="reveal">
+    <div class="slides">
+        <section data-background="#FCFCF4">
+            <h1>Seelviz - Visualizing Clarity</h1>
+            <h2>Albert Lee, Tony Sun, Luke Zhu</h2>
+        </section>
+
+        <section data-background="#FCFCF4">
+            <h2>Weekly Objectives</h2>
+            <ul>
+                <li>Send email to Ailey Crow containing a representative Clarity html plotly file</li>
+                <li>Use Greg Kiar's Happyplotter code to plot our data</li>
+                <li>Ask Greg for help regarding downsampling our data</li>
+                <li>Find out the units for the size of the sphere that we used to connect the edges</li>
+                <li>Find out how hard it would be to overlay an atlas</li>
+                <li>Research different ways to overlay - consider the centroid, blocks, boundaries</li>
+                <li>Compute 7 graph statistics as outlined in glocal paper</li>
+            </ul>
+        </section>
+
+        <section data-background="#FCFCF4">
+            <h2>Deliverables</h2>
+            <ul>
+                <li>CC'd Jovo to our Ailey email</li>
+                <li><a href=https://github.com/Upward-Spiral-Science/seelviz/blob/gh-pages/graphfiles/LukeGraphs/Fear199localeq.5000.png>HappyPlotter Example</a></li>
+                <li>Messaged Greg about downsampling, meeting with Greg tomorrow</li>
+                <li>Units for Sphere are voxels</li>
+                <li><a href="https://github.com/Upward-Spiral-Science/seelviz/blob/gh-pages/pdfs/atlas-fitting-clarity-upload.pdf">Atlas Overlay</a></li>
+                <li><a href="https://github.com/Upward-Spiral-Science/seelviz/blob/gh-pages/Graph%20Statistics%20For%20Fear199.ipynb">Graph Statistics Results</a></li>
+            </ul>
+        </section>
+
+        <section data-background="#FCFCF4">
+            <h2>Brief Graph Statistics Explanation</h2>
+            <ul>
+                <li><a href="https://en.wikipedia.org/wiki/Adjacency_matrix">Number of Non-Zero Edges (courtesy Wikipedia)</a>: Total number of edges.</li>
+                <li><a href="http://mathworld.wolfram.com/DegreeSequence.html"> Degree Sequence (courtesy Wolfram) </a>: A degree sequence is a monotonic nonincreasing sequence of the vertex degrees of its graph vertices.</li>
+                <li><a href="https://en.wikipedia.org/wiki/Graph_theory">Edge Weights (courtesy Wikipedia)</a>: A weighting system that imparts a value to each edge (eg: the length of a road between two nodes).</li>
+                <li><a href="https://en.wikipedia.org/wiki/Clustering_coefficient">Clustering Coefficient (courtesy Wikipedia)</a>: In graph theory, a clustering coefficient is a measure of the degree to which nodes in a graph tend to cluster together.</li>
+            </ul>
+        </section>
+
+        <section data-background="#FCFCF4">
+            <h2>Brief Graph Statistics Explanation (cont)</h2>
+            <ul>
+                <li><a href="https://en.wikipedia.org/wiki/Scan_statistic">Scan Statistic i (courtesy Wikipedia)</a>: A scan statistic or window statistic is a problem relating to the clustering of randomly positioned points.</li>
+                <li><a href="http://mathworld.wolfram.com/Eigenvalue.html">Eigenvalues (courtesy Wolfram)</a>: Special set of scalars associated with a linear set of equations.</li>
+                <li><a href="https://en.wikipedia.org/wiki/Betweenness_centrality">Between-ness Centrality (courtesy Wikipedia)</a>: Betweenness centrality is an indicator of a node's centrality in a network. It is equal to the number of shortest paths from all vertices to all others that pass through that node.</li>
+            </ul>
+        </section>
+
+        <section data-background="#FCFCF4">
+            <h2>Next Week</h2>
+            <ul>
+                <li><a href="https://github.com/Upward-Spiral-Science/seelviz/issues/10">Attend to correspondence from Ailey</a></li>
+                <li><a href="https://github.com/Upward-Spiral-Science/seelviz/blob/gh-pages/pdfs/Fear199localeq.screeplot.pdf">Scree Plots</a></li>
+            </ul>
+        </section>
+
+    </div>
+</div>
+
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.js"></script>
+
+<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+</body>
+</html>
